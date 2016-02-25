@@ -17,8 +17,10 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
 </head>
-<body ng-app="app" ng-controller="appController">
-  <div>{{test}}</div>
+<body ng-app="myApp" ng-controller="appController">
+  <div ng-repeat="week in weeks">
+    {{week}}
+  </div>
 
 </body>
 </html>
