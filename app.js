@@ -5,6 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+require('./models/Days');
+require('./models/Weeks');
+require('./models/Weights');
+require('./models/Workouts');
+
+mongoose.connect('mongodb://localhost/weights');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
